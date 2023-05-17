@@ -1,3 +1,7 @@
+package PositionReciver;
+
+import Map.TicTacToeMap;
+
 import java.util.List;
 import java.util.Optional;
 

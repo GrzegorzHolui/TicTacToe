@@ -1,3 +1,5 @@
+package PositionGenerator;
+
 import java.util.List;
 
 public class PositionGenerator implements Generated {

@@ -1,3 +1,7 @@
+package PositionReciver;
+
+import Map.TicTacToeMap;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -37,5 +41,7 @@ public class PositionReceiver {
         List<Character> row = ticTacToeMap.getMap().get(positionY);
         row.set(positionX, 'O');
         return true;
+
+        // todo refactoring too fat method
     }
 }
