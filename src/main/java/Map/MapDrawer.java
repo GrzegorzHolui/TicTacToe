@@ -1,7 +1,5 @@
 package Map;
 
-import Map.TicTacToeMap;
-
 public class MapDrawer {
 
     private TicTacToeMap ticTacToeMap;

@@ -1,4 +1,6 @@
+import Map.CharacterAdder;
 import Map.TicTacToeMap;
+import PositionReciver.Inputer;
 import PositionReciver.PositionReceiver;
 import PositionReciver.PositionValidator;
 
@@ -23,8 +25,9 @@ public class Main {
 
         TicTacToeMap ticTacToeMap = new TicTacToeMap(map);
         PositionValidator positionValidator = new PositionValidator(ticTacToeMap);
-        PositionReceiver positionReceiver = new PositionReceiver(scanner, positionValidator, ticTacToeMap);
-        TicTacToeGame ticTacToeGame = new TicTacToeGame(positionReceiver);
+        Inputer positionReceiver = new PositionReceiver(scanner, positionValidator, ticTacToeMap);
+        CharacterAdder characterAdder = new CharacterAdder(ticTacToeMap);
+        TicTacToeGame ticTacToeGame = new TicTacToeGame(positionReceiver, characterAdder);
         ticTacToeGame.startGame();
     }
 }

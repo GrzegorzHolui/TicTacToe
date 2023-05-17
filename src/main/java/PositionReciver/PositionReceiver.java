@@ -3,10 +3,11 @@ package PositionReciver;
 import Map.TicTacToeMap;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class PositionReceiver {
+public class PositionReceiver implements Inputer{
 
     private final Scanner scanner;
     private PositionValidator positionValidator;
@@ -18,7 +19,7 @@ public class PositionReceiver {
         this.ticTacToeMap = ticTacToeMap;
     }
 
-    public boolean inputPosition() {
+    public List<Integer> inputPosition() {
         List<Integer> resultPositions = new ArrayList<>();
         boolean whichPosition = false;
         while (resultPositions.size() < 2) {
@@ -36,12 +37,6 @@ public class PositionReceiver {
             System.out.println("This position has been chosen");
             inputPosition();
         }
-        Integer positionY = resultPositions.get(0);
-        Integer positionX = resultPositions.get(1);
-        List<Character> row = ticTacToeMap.getMap().get(positionY);
-        row.set(positionX, 'O');
-        return true;
-
-        // todo refactoring too fat method
+        return resultPositions;
     }
 }
